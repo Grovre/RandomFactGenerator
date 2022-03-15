@@ -9,8 +9,8 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 public class JokeEvent extends Event implements Cancellable {
 
     private boolean cancelled;
-    private Player player;
-    private String joke;
+    private final Player player;
+    private final String joke;
     private static final HandlerList handlers = new HandlerList();
 
     public JokeEvent(Player player,String joke) {
