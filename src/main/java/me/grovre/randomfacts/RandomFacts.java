@@ -41,7 +41,7 @@ public final class RandomFacts extends JavaPlugin {
             } catch (UnirestException | IOException e) {
                 e.printStackTrace();
             }
-            assert joke!= null;
+            assert joke != null;
             for(Player p : Bukkit.getOnlinePlayers()) {
                 JokeEvent event = new JokeEvent(p, joke);
                 Bukkit.getScheduler().runTask(this, () -> Bukkit.getPluginManager().callEvent(event));
