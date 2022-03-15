@@ -35,7 +35,7 @@ public final class RandomFacts extends JavaPlugin {
             }
             for(Player p : Bukkit.getOnlinePlayers()) {
                 JokeEvent event = new JokeEvent(p, joke);
-                Bukkit.getPluginManager().callEvent(event);
+                Bukkit.getScheduler().runTask(this, () -> Bukkit.getPluginManager().callEvent(event));
                 p.sendMessage(joke);
             }
         };
